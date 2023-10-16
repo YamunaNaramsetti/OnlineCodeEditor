@@ -1,38 +1,61 @@
-.App {
+.container
+{
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+}
+.left,.right
+{
+  flex-basis: 50%;
+  padding: 10px;
+}
+.right
+{
   text-align: center;
 }
+.right button{
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  background-color: skyblue;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+  transition: all 0.2s;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+}
+.left textarea
+{
+  width: 100%;
+  height: 28%;
+  background: #1f1f1f;
+  color: wheat;
+  padding: 10px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 1.2rem;
+  resize: none;
+  overflow: visible;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right iframe
+{
+  width: 100%;
+  height: 80vh;
+  background-color: #fff;
+  border: 0;
+  outline: 0;
+  scroll-behavior: smooth;
+  overflow: visible;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left label
+{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background: #000;
+  height: 20px;
+  font-size: 1.3rem;
 }
