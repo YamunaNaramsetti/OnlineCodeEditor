@@ -9,6 +9,7 @@ function App() {
   const handleClick = e=>
   {
     const outputs=document.getElementById("output");
+    outputs.classList.add("output")
     outputs.contentDocument.body.innerHTML = htmls+'<style>'+css+'</style>';
     outputs.contentWindow.eval(javascript)
   }
@@ -17,18 +18,20 @@ function App() {
     <Header />
     <div className="container">
       <div className='left'>
-      <label>HTML</label>
-      <textarea name='html' onChange={(e)=>{setHtml(e.target.value)}} />
+        <label className="html">HTML</label>
+        <textarea name='html' className="html-color" onChange={(e)=>{setHtml(e.target.value)}} />
+        <label className='css'>CSS</label>
+        <textarea name='css'onChange={(e)=>{setCss(e.target.value)}} />
 
-      <label>CSS</label>
-      <textarea name='css'onChange={(e)=>{setCss(e.target.value)}} />
-
-      <label>Javascript</label>
+      <label className='js'>Javascript</label>
       <textarea name='js' onChange={(e)=>{setJavascript(e.target.value)}} />
       </div>
       <div className='right'>
-        <button onClick={handleClick}>Run</button>
-        <iframe id='output'></iframe>
+        <button onClick={handleClick} className='button'>Run</button>
+        <div className='cont'>
+        
+        <iframe id='output' className='output'></iframe>
+        </div>
       </div>
 
     </div>
